@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Navbar from "../layouts/Navbar.jsx";
@@ -11,6 +11,14 @@ const Login = () => {
     name: "",
     password: "",
   });
+
+  // Check localStorage for logged-in user data on initial load
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem('user');
+    if (loggedInUser) {
+      navigate('/'); // Redirect to home if a user is logged in
+    }
+  }, [navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -28,7 +36,9 @@ const Login = () => {
       const foundUser = users.find(user => user.name === values.name && user.password === values.password);
 
       if (foundUser) {
-        toast.success('Logged in successfully.');
+        // Save user data in localStorage upon successful login
+        localStorage.setItem('user', JSON.stringify({name: foundUser.name, id: foundUser.id}));
+        toast.success('Logged in as ' + foundUser.name);
         navigate('/');
       } else {
         toast.error('Login failed: Invalid credentials');

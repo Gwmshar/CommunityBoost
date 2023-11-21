@@ -8,18 +8,18 @@ import AboutUs from "../AboutUs/AboutUs.jsx";
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [refreshFeed, setRefreshFeed] = useState(false);
+
   return (
     <div>
-      {isLoggedIn ? (
+     
         <div className="home">
           <Navbar />
-          <NewCard />
-          <FeedCard />
+          <NewCard setRefreshFeed={setRefreshFeed}/>
+          <FeedCard refreshFeed={refreshFeed}/>
           <AboutUs />
         </div>
-      ) : (
-        <Navigate to="/login" />
-      )}
+    
     </div>
   );
 }

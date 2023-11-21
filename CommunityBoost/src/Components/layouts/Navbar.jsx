@@ -1,7 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
-export default function Navbar() {
+
+const Navbar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check authentication status upon component mount or page refresh
+    const user = localStorage.getItem('user');
+    if (user) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    // Clear user data from localStorage upon logout
+    localStorage.removeItem('user');
+    setIsLoggedIn(false);
+    // Redirect to the desired page after logout, e.g., login page
+    navigate('/login');
+  };
+
   return (
     <div className="navbar">
       <div className="navTitle">
@@ -11,12 +33,25 @@ export default function Navbar() {
           </h2>
         </Link>
       </div>
-      <div className="navProfile">
-        <img
-          src="https://images.unsplash.com/photo-1700344207586-7374ef84638a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="profile.pic"
-        ></img>
+      <div className="navLinks">
+        {!isLoggedIn && (
+          <>
+            <Link to="/login" className="navLink" style={{ color: "white", textDecoration: "none" }}>
+              Login
+            </Link>
+            <Link to="/register" className="navLink" style={{ color: "#FFD700", textDecoration: "none", marginInlineStart: "8px" }}>
+              Signup
+            </Link>
+          </>
+        )}
+        {isLoggedIn && (
+          <Link to="/" className="navLink" style={{ color: "white", textDecoration: "none" }} onClick={handleLogout}>
+            Logout
+          </Link>
+        )}
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
