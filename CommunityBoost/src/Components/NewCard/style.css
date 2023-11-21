@@ -1,0 +1,27 @@
+.newCard {
+  width: 50%;
+  margin-top: 8px;
+}
+.newCard__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: #005e7d;
+  border-radius: 10px;
+}
+.newCard__input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+.newCard__button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.newCard__button button {
+  width: 40%;
+}

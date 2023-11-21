@@ -3,7 +3,6 @@ import "./style.css";
 
 const Card = ({ data }) => {
   const contentImage = data.contentImage;
-  console.log(contentImage);
   return (
     <div className="card">
       <div className="card__container">
