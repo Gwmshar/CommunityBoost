@@ -4,6 +4,7 @@ import FeedCard from "../FeedCard/FeedCard.jsx";
 import { Navigate } from "react-router-dom";
 import NewCard from "../NewCard/NewCard.jsx";
 import "./Home.css";
+import AboutUs from "../AboutUs/AboutUs.jsx";
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -14,6 +15,7 @@ export default function Home() {
           <Navbar />
           <NewCard />
           <FeedCard />
+          <AboutUs />
         </div>
       ) : (
         <Navigate to="/login" />
