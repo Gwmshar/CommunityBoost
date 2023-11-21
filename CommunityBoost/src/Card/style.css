@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+.card {
+  width: 100%;
+  height: auto;
+
+  margin-top: 20px;
+}
+.card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 60%;
+  background-color: #005e7d;
+  padding: 5%;
+  border-radius: 9px;
+}
+.card__profile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.card__profile-text {
+  color: #ffff;
+  font-family: "Montserrat", sans-serif;
+}
+.card__profile-pic img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card__description {
+  font-family: "Open Sans", sans-serif;
+  color: #ffff;
+}
+
+.card__content-img img {
+  width: 100%;
+}
+
+.card__button {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  gap: 5px;
+}
+button {
+  width: 80%;
+  height: 100%;
+  background-color: #5da25d;
+  border-radius: 100px;
+  border: none;
+  padding: 5px;
+  font-weight: 700;
+  color: #fff;
+  transition: background-color 0.5s;
+}
+
+.card__comment {
+  margin-top: 5px;
+  width: 100%;
+}
+.card__comment-input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+.card__comment-button {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #40e640;
+}
