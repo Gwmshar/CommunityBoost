@@ -1,4 +1,11 @@
 {
+  "users": [
+    {
+      "name": "test",
+      "password": "test",
+      "id": 1
+    }
+  ],
   "posts": [
     {
       "id": 1,
@@ -16,7 +23,6 @@
       "profile": "profile",
       "contentImage": "https://img.freepik.com/free-vector/startup-life-concept-illustration_114360-1226.jpg"
     },
-
     {
       "id": 4,
       "user": "Jhon Doe",
