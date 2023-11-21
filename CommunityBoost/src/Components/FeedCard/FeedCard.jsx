@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "../../Card/Card";
+import Card from "../Card/Card";
 
 const FeedCard = () => {
   const [posts, setPosts] = useState([]); // Renamed 'post' to 'posts' for clarity
@@ -18,7 +18,7 @@ const FeedCard = () => {
   }, []); // Empty dependency array to fetch data only on initial component mount
 
   return (
-    <div>
+    <div className="feed">
       {posts.map((data) => (
         <Card key={data.id} data={data} />
       ))}
