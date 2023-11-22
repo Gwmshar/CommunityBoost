@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../Card/Card";
 
-const FeedCard = () => {
+const FeedCard = ({refreshFeed}) => {
   const [posts, setPosts] = useState([]); // Renamed 'post' to 'posts' for clarity
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const FeedCard = () => {
       }
     }
     fetchData();
-  }, []); // Empty dependency array to fetch data only on initial component mount
+  }, [refreshFeed]); // Empty dependency array to fetch data only on initial component mount
 
   return (
     <div className="feed">
