@@ -1,10 +1,10 @@
-<div style=" text-align: center;">
+<div align="center">
 
 ![Community Boost](/img/communityBoostIcon.png)
 
 </div>
 
-<div style="text-align: center;">
+<div align="center">
 
 ![html5](https://img.shields.io/badge/HTML-Icon-orange?logo=html5&logoColor=white)
 ![css3](https://img.shields.io/badge/CSS-Icon-blue?logo=css3&logoColor=white)
