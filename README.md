@@ -1,4 +1,17 @@
-# Community<span style="color: #fa9c1b;">Boost</span>
+<div align="center">
+
+![Community Boost](/img/communityBoostIcon.png)
+
+</div>
+
+<div align="center">
+
+![html5](https://img.shields.io/badge/HTML-Icon-orange?logo=html5&logoColor=white)
+![css3](https://img.shields.io/badge/CSS-Icon-blue?logo=css3&logoColor=white)
+![javascript](https://img.shields.io/badge/JavaScript-Icon-yellow?logo=javascript&logoColor=white)
+![react](https://img.shields.io/badge/React-Icon-blue?logo=react&logoColor=white)
+
+  </div>
 
 An inclusive crowdfunding platform dedicated to funding projects that advance social welfare and community well-being.
 
@@ -14,3 +27,7 @@ An inclusive crowdfunding platform dedicated to funding projects that advance so
   Empower yourself by volunteering for social welfare initiatives. Discover opportunities to contribute your skills and time towards causes that matter.
 
   ![Community Boost](/img/communityBoost.jpg)
+
+  <br>
+  <hr>
+  <br>

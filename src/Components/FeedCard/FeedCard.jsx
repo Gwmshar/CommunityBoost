@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../Card/Card";
 
-const FeedCard = ({refreshFeed}) => {
+const FeedCard = ({ refreshFeed }) => {
   const [posts, setPosts] = useState([]); // Renamed 'post' to 'posts' for clarity
 
   useEffect(() => {

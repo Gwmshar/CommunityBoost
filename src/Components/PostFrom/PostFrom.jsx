@@ -3,7 +3,6 @@ import axios from "axios";
 import "./style.css";
 import { toast } from "react-toastify";
 
-
 const PostFrom = ({ setClicked, setRefreshFeed }) => {
   const [description, setDescripton] = useState("");
   // const [image, setImage] = useState(null);
@@ -13,8 +12,7 @@ const PostFrom = ({ setClicked, setRefreshFeed }) => {
     setImage(file);
   };
 
-
-   const handleClick = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
 
     // Retrieve user data from local storage
@@ -28,10 +26,12 @@ const PostFrom = ({ setClicked, setRefreshFeed }) => {
     const data = {
       userid: userData.id,
       user: userData.name,
-      profilePic: "https://images.unsplash.com/photo-1700344207586-7374ef84638a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      profilePic:
+        "https://images.unsplash.com/photo-1700344207586-7374ef84638a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: description,
       profile: "profile",
-      contentImage: "https://img.freepik.com/free-vector/startup-life-concept-illustration_114360-1226.jpg",
+      contentImage:
+        "https://img.freepik.com/free-vector/startup-life-concept-illustration_114360-1226.jpg",
     };
 
     axios
@@ -40,7 +40,7 @@ const PostFrom = ({ setClicked, setRefreshFeed }) => {
         toast.success("Post created");
         setRefreshFeed((prev) => !prev); // Trigger the refresh
         setClicked(false);
-        console.log(response.data)
+        console.log(response.data);
       })
       .catch((error) => {
         console.error("Error creating post:", error);
